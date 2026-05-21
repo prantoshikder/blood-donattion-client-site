@@ -18,6 +18,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import EmergencyModal from "./EmergencyModal";
 
 const links = [
   { href: "/", label: "Home", icon: Home },
@@ -30,7 +31,13 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [emergencyOpen, setEmergencyOpen] = useState(false);
   const pathname = usePathname();
+
+  const openEmergency = () => {
+    setEmergencyOpen(true);
+    setOpen(false);
+  };
 
   useEffect(() => {
     setOpen(false);
@@ -124,16 +131,17 @@ export default function Navbar() {
 
           {/* Desktop actions */}
           <div className="hidden items-center gap-2 lg:flex">
-            <Link
-              href="/requests/new"
-              className="inline-flex items-center gap-1.5 rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 ring-1 ring-inset ring-rose-200 transition hover:bg-rose-100"
+            <button
+              type="button"
+              onClick={openEmergency}
+              className="inline-flex items-center gap-1.5 rounded-full bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 ring-1 ring-inset ring-rose-200 transition hover:bg-rose-100 active:scale-95"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-500 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-rose-600" />
               </span>
               Emergency
-            </Link>
+            </button>
             <Link
               href="/notifications"
               aria-label="Notifications"
@@ -159,13 +167,18 @@ export default function Navbar() {
 
           {/* Mobile actions */}
           <div className="flex items-center gap-2 lg:hidden">
-            <Link
-              href="/requests/new"
+            <button
+              type="button"
+              onClick={openEmergency}
               aria-label="Emergency"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200 transition active:scale-95"
+              className="relative grid h-11 w-11 place-items-center rounded-xl bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200 transition active:scale-95"
             >
               <AlertCircle className="h-5 w-5" />
-            </Link>
+              <span className="absolute -right-0.5 -top-0.5 flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-500 opacity-75" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-rose-600 ring-2 ring-white" />
+              </span>
+            </button>
             <button
               aria-label="Toggle menu"
               aria-expanded={open}
@@ -241,16 +254,17 @@ export default function Navbar() {
             <p className="mt-4 px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
               Quick actions
             </p>
-            <Link
-              href="/requests/new"
-              className="flex items-center gap-3 rounded-2xl bg-linear-to-r from-rose-50 to-amber-50 px-3 py-3 text-base font-semibold text-rose-700"
+            <button
+              type="button"
+              onClick={openEmergency}
+              className="flex w-full items-center gap-3 rounded-2xl bg-linear-to-r from-rose-50 to-amber-50 px-3 py-3 text-left text-base font-semibold text-rose-700 active:scale-[0.99]"
             >
               <div className="grid h-9 w-9 place-items-center rounded-xl bg-white text-rose-600 shadow-sm">
                 <AlertCircle className="h-4 w-4" />
               </div>
               Post emergency request
               <ChevronRight className="ml-auto h-4 w-4 text-rose-400" />
-            </Link>
+            </button>
             <Link
               href="/notifications"
               className="flex items-center gap-3 rounded-2xl px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50"
@@ -291,6 +305,11 @@ export default function Navbar() {
           </div>
         </aside>
       </div>
+
+      <EmergencyModal
+        open={emergencyOpen}
+        onClose={() => setEmergencyOpen(false)}
+      />
     </>
   );
 }
