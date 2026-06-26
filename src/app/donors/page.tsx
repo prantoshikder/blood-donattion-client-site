@@ -1,22 +1,104 @@
-import { Droplet, Filter, MapPin, Phone, Search, Star } from "lucide-react";
 import SiteShell from "@/components/SiteShell";
+import Image from "next/image";
+import { Droplet, Filter, MapPin, Phone, Search, Star } from "lucide-react";
 
 const donors = [
-  { name: "Tanvir Ahmed", blood: "O+", city: "Dhaka", last: "2 months", rating: 4.9, available: true },
-  { name: "Nusrat Jahan", blood: "A−", city: "Chattogram", last: "1 month", rating: 4.8, available: true },
-  { name: "Imran Hossain", blood: "B+", city: "Sylhet", last: "3 months", rating: 4.7, available: false },
-  { name: "Rakib Khan", blood: "AB+", city: "Dhaka", last: "4 months", rating: 4.9, available: true },
-  { name: "Mehedi Hasan", blood: "O−", city: "Khulna", last: "5 months", rating: 5.0, available: true },
-  { name: "Anika Sultana", blood: "A+", city: "Dhaka", last: "1 month", rating: 4.6, available: false },
-  { name: "Sumi Akter", blood: "B−", city: "Rajshahi", last: "2 weeks", rating: 4.8, available: true },
-  { name: "Tania Akter", blood: "AB−", city: "Barishal", last: "6 months", rating: 4.7, available: true },
-  { name: "Saif Ahmed", blood: "O+", city: "Dhaka", last: "3 weeks", rating: 4.9, available: true },
+  {
+    name: "Tanvir Ahmed",
+    blood: "O+",
+    city: "Dhaka",
+    last: "2 months",
+    rating: 4.9,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Nusrat Jahan",
+    blood: "A−",
+    city: "Chattogram",
+    last: "1 month",
+    rating: 4.8,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Imran Hossain",
+    blood: "B+",
+    city: "Sylhet",
+    last: "3 months",
+    rating: 4.7,
+    available: false,
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Rakib Khan",
+    blood: "AB+",
+    city: "Dhaka",
+    last: "4 months",
+    rating: 4.9,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Mehedi Hasan",
+    blood: "O−",
+    city: "Khulna",
+    last: "5 months",
+    rating: 5.0,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Anika Sultana",
+    blood: "A+",
+    city: "Dhaka",
+    last: "1 month",
+    rating: 4.6,
+    available: false,
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Sumi Akter",
+    blood: "B−",
+    city: "Rajshahi",
+    last: "2 weeks",
+    rating: 4.8,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Tania Akter",
+    blood: "AB−",
+    city: "Barishal",
+    last: "6 months",
+    rating: 4.7,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=faces",
+  },
+  {
+    name: "Saif Ahmed",
+    blood: "O+",
+    city: "Dhaka",
+    last: "3 weeks",
+    rating: 4.9,
+    available: true,
+    image:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200&h=200&fit=crop&crop=faces",
+  },
 ];
 
 export default function PublicDonorsPage() {
   return (
     <SiteShell>
-      <section className="bg-gradient-to-br from-brand-50 via-rose-50/70 to-white">
+      <section className="bg-linear-to-br from-brand-50 via-rose-50/70 to-white">
         <div className="section py-10 sm:py-16">
           <div className="mx-auto max-w-3xl text-center">
             <span className="badge">
@@ -59,7 +141,11 @@ export default function PublicDonorsPage() {
       <section className="section py-10 sm:py-16">
         <div className="mb-5 flex flex-col gap-2 sm:mb-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-slate-600">
-            Showing <span className="font-semibold text-slate-900">{donors.length}</span> donors
+            Showing{" "}
+            <span className="font-semibold text-slate-900">
+              {donors.length}
+            </span>{" "}
+            donors
           </p>
           <select className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-medium text-slate-600 sm:self-auto">
             <option>Sort: Most recent</option>
@@ -73,9 +159,14 @@ export default function PublicDonorsPage() {
             <div key={d.name} className="card">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-rose-600 font-semibold text-white">
-                    {d.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
-                  </div>
+                  <Image
+                    src={d.image}
+                    alt={d.name}
+                    width={48}
+                    height={48}
+                    priority
+                    className="h-12 w-12 rounded-xl object-cover"
+                  />
                   <div>
                     <p className="font-semibold text-slate-900">{d.name}</p>
                     <div className="mt-0.5 flex items-center gap-1 text-xs text-slate-500">
@@ -103,7 +194,9 @@ export default function PublicDonorsPage() {
                   </p>
                 </div>
                 <div className="rounded-lg bg-slate-50 p-2.5">
-                  <p className="text-sm font-semibold text-slate-700">{d.city}</p>
+                  <p className="text-sm font-semibold text-slate-700">
+                    {d.city}
+                  </p>
                   <p className="text-[10px] uppercase tracking-wider text-slate-500">
                     City
                   </p>
