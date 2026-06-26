@@ -3,6 +3,14 @@ import ContactHeroSection from "@/components/contact/ContactHeroSection";
 import ContactInfoCards from "@/components/contact/ContactInfoCards";
 import ContactForm from "@/components/contact/ContactForm";
 import ContactLocationSection from "@/components/contact/ContactLocationSection";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Contact Us",
+  description:
+    "Get in touch with the RedDrop team. Whether you're a donor, hospital, or just curious — email, call, or visit our Dhaka office and we'll respond within a day.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

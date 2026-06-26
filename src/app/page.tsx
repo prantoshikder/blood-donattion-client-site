@@ -13,6 +13,15 @@ import PartnersSection from "@/components/home/PartnersSection";
 import FAQSection from "@/components/home/FAQSection";
 import AppDownloadSection from "@/components/home/AppDownloadSection";
 import CTASection from "@/components/home/CTASection";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "RedDrop — Save Lives with a Drop of Blood",
+  description:
+    "Find verified blood donors near you or post an emergency request in minutes. RedDrop connects donors, receivers, hospitals and blood banks across Bangladesh.",
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function HomePage() {
   return (

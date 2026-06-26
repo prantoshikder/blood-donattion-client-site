@@ -13,16 +13,29 @@ import {
   Droplet,
   Users,
 } from "lucide-react";
+import type {
+  Perk,
+  CompatibilityRow,
+  EligibilityCheck,
+  HomeFaq,
+  Feature,
+  Step,
+  HomeRole,
+  HomeStat,
+  HomeTestimonial,
+  Camp,
+  UrgentRequest,
+} from "@/types/home";
 
 // AppDownloadSection
-export const perks = [
+export const perks: Perk[] = [
   { icon: Bell, text: "Instant emergency alerts" },
   { icon: MapPin, text: "Find donors on the map" },
   { icon: Zap, text: "1-tap respond & donate" },
 ];
 
 // BloodCompatibilitySection
-export const compatibility = [
+export const compatibility: CompatibilityRow[] = [
   { type: "O−", donateTo: "Everyone", receiveFrom: "O−", tag: "Universal donor", color: "from-rose-500 to-rose-600" },
   { type: "O+", donateTo: "O+, A+, B+, AB+", receiveFrom: "O+, O−", tag: "Most common", color: "from-rose-400 to-rose-500" },
   { type: "A−", donateTo: "A±, AB±", receiveFrom: "A−, O−", tag: "Rare", color: "from-amber-500 to-orange-500" },
@@ -34,7 +47,7 @@ export const compatibility = [
 ];
 
 // EligibilityCheckerSection
-export const checks = [
+export const checks: EligibilityCheck[] = [
   {
     icon: Calendar,
     pass: "Age 18 – 65 years",
@@ -58,7 +71,7 @@ export const checks = [
 ];
 
 // FAQSection
-export const faqs = [
+export const faqs: HomeFaq[] = [
   {
     q: "Is donating blood safe?",
     a: "Yes. Sterile, single-use needles are used for every donation. The process takes about 10 minutes and is performed by trained medical professionals.",
@@ -86,7 +99,7 @@ export const faqs = [
 ];
 
 // FeaturesSection
-export const features = [
+export const features: Feature[] = [
   {
     icon: Search,
     title: "Find Donors Instantly",
@@ -126,10 +139,10 @@ export const features = [
 ];
 
 // HeroSection
-export const bloodGroups = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
+export const bloodGroups: string[] = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
 
 // HowItWorksSection
-export const steps = [
+export const steps: Step[] = [
   {
     n: "01",
     title: "Create your account",
@@ -148,7 +161,7 @@ export const steps = [
 ];
 
 // PartnersSection
-export const partners = [
+export const partners: string[] = [
   "Square Hospital",
   "Apollo Hospital",
   "United Hospital",
@@ -164,7 +177,7 @@ export const partners = [
 ];
 
 // RolesSection
-export const roles = [
+export const roles: HomeRole[] = [
   { t: "Donor", d: "Give blood and track impact", i: Droplet, c: "bg-rose-500" },
   { t: "Receiver", d: "Request blood urgently", i: HeartHandshake, c: "bg-amber-500" },
   { t: "Volunteer", d: "Organize camps & drives", i: Users, c: "bg-emerald-500" },
@@ -172,7 +185,7 @@ export const roles = [
 ];
 
 // StatsSection
-export const stats = [
+export const stats: HomeStat[] = [
   { k: "12,400+", v: "Verified Donors" },
   { k: "640+", v: "Partner Hospitals" },
   { k: "38,200", v: "Donations" },
@@ -180,7 +193,7 @@ export const stats = [
 ];
 
 // TestimonialsSection
-export const testimonials = [
+export const testimonials: HomeTestimonial[] = [
   {
     name: "Sadia Rahman",
     role: "Donor • O+",
@@ -202,7 +215,7 @@ export const testimonials = [
 ];
 
 // UpcomingCampsSection
-export const camps = [
+export const camps: Camp[] = [
   {
     title: "Dhaka University Blood Drive",
     date: "May 28, 2026",
@@ -230,7 +243,7 @@ export const camps = [
 ];
 
 // UrgentRequestsSection
-export const urgentRequests = [
+export const urgentRequests: UrgentRequest[] = [
   {
     blood: "O−",
     patient: "Aman Khan",

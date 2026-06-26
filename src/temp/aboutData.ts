@@ -5,15 +5,22 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
+import type {
+  AboutStat,
+  AboutValue,
+  JourneyMilestone,
+  TeamMember,
+  Testimonial,
+} from "@/types/about";
 
-export const stats = [
+export const stats: AboutStat[] = [
   { k: "12.4K+", v: "Active donors", i: Users },
   { k: "38K+", v: "Lives saved", i: HeartHandshake },
   { k: "640+", v: "Hospitals", i: Award },
   { k: "60+", v: "Cities", i: Globe2 },
 ];
 
-export const team = [
+export const team: TeamMember[] = [
   {
     n: "Sadia Rahman",
     r: "Founder & CEO",
@@ -36,7 +43,7 @@ export const team = [
   },
 ];
 
-export const values = [
+export const values: AboutValue[] = [
   {
     i: HeartHandshake,
     t: "Compassion first",
@@ -54,7 +61,7 @@ export const values = [
   },
 ];
 
-export const journey = [
+export const journey: JourneyMilestone[] = [
   {
     y: "2021",
     t: "The first request",
@@ -77,14 +84,14 @@ export const journey = [
   },
 ];
 
-export const gallery = [
+export const gallery: string[] = [
   "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h=600&fit=crop",
   "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&h=600&fit=crop",
   "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=600&fit=crop",
   "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?w=600&h=600&fit=crop",
 ];
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
   {
     q: "I needed O− blood at 2am for my mother. RedDrop found a donor in 11 minutes. I'll never forget it.",
     n: "Farhana Akter",

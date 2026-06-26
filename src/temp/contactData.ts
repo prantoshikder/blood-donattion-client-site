@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import type { ContactChannel, WorkingHour } from "@/types/contact";
 
-export const channels = [
+export const channels: ContactChannel[] = [
   {
     i: Mail,
     t: "Email us",
@@ -21,7 +22,7 @@ export const channels = [
   },
 ];
 
-export const hours = [
+export const hours: WorkingHour[] = [
   { d: "Monday – Friday", h: "9:00 AM – 8:00 PM" },
   { d: "Saturday", h: "10:00 AM – 6:00 PM" },
   { d: "Sunday", h: "Emergency support only" },

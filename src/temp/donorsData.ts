@@ -1,4 +1,6 @@
-export const donors = [
+import type { Donor } from "@/types/donors";
+
+export const donors: Donor[] = [
   {
     name: "Tanvir Ahmed",
     blood: "O+",

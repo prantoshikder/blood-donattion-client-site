@@ -1,14 +1,6 @@
-export type BloodRequest = {
-  name: string;
-  age: number;
-  blood: string;
-  units: number;
-  hospital: string;
-  when: string;
-  urgent: boolean;
-  reason: string;
-  image: string;
-};
+import type { BloodRequest, DonorCompatibilityMap } from "@/types/request";
+
+export type { BloodRequest } from "@/types/request";
 
 export const TABS = [
   "All requests",
@@ -37,7 +29,7 @@ export const CURRENT_USER_CITY = "Dhaka";
 export const CURRENT_USER_BLOOD = "O+";
 
 /** Which recipient blood groups a given donor blood group can donate to. */
-export const DONOR_CAN_GIVE_TO: Record<string, string[]> = {
+export const DONOR_CAN_GIVE_TO: DonorCompatibilityMap = {
   "O−": ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"],
   "O+": ["O+", "A+", "B+", "AB+"],
   "A−": ["A+", "A−", "AB+", "AB−"],

@@ -5,17 +5,9 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import type { RoleOption, PasswordStrength } from "@/types/signup";
 
-export type Role = "donor" | "receiver" | "volunteer" | "hospital" | "admin";
-
-export type RoleOption = {
-  key: Role;
-  title: string;
-  desc: string;
-  icon: typeof Droplet;
-  color: string;
-  badge?: string;
-};
+export type { Role, RoleOption } from "@/types/signup";
 
 export const roles: RoleOption[] = [
   {
@@ -56,9 +48,9 @@ export const roles: RoleOption[] = [
   },
 ];
 
-export const bloodGroups = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
+export const bloodGroups: string[] = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
 
-export const strengthMeta = [
+export const strengthMeta: PasswordStrength[] = [
   { label: "Too weak", color: "bg-slate-200", text: "text-slate-400" },
   { label: "Weak", color: "bg-rose-500", text: "text-rose-600" },
   { label: "Fair", color: "bg-amber-500", text: "text-amber-600" },

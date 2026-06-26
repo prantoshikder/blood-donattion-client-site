@@ -2,6 +2,14 @@ import SiteShell from "@/components/SiteShell";
 import Image from "next/image";
 import { Droplet, Filter, MapPin, Phone, Search, Star } from "lucide-react";
 import { donors } from "@/temp/donorsData";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Find Blood Donors Near You",
+  description:
+    "Search verified blood donors by blood group, city or hospital. Reach available O+, A+, B+, AB+ and all other blood-type donors in just a few taps with RedDrop.",
+  path: "/donors",
+});
 
 export default function PublicDonorsPage() {
   return (

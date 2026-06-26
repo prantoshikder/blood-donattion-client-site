@@ -15,8 +15,9 @@ import {
   Settings,
   Users,
 } from "lucide-react";
+import type { NavLink, SidebarGroup, FooterLink } from "@/types/layout";
 
-export const links = [
+export const links: NavLink[] = [
   { href: "/", label: "Home", icon: Home },
   { href: "/donors", label: "Find Donors", icon: Search },
   { href: "/requests", label: "Blood Requests", icon: Droplet },
@@ -24,7 +25,7 @@ export const links = [
   { href: "/contact", label: "Contact", icon: Phone },
 ];
 
-export const groups = [
+export const groups: SidebarGroup[] = [
   {
     label: "Overview",
     items: [
@@ -52,9 +53,9 @@ export const groups = [
   },
 ];
 
-export const bloodGroups = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
+export const bloodGroups: string[] = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
 
-export const platformLinks = [
+export const platformLinks: FooterLink[] = [
   { href: "/donors", label: "Find Donors" },
   { href: "/requests", label: "Blood Requests" },
   { href: "/camps", label: "Donation Camps" },
@@ -62,7 +63,7 @@ export const platformLinks = [
   { href: "/dashboard", label: "Dashboard" },
 ];
 
-export const resourceLinks = [
+export const resourceLinks: FooterLink[] = [
   { href: "/about", label: "About Us" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
@@ -70,7 +71,7 @@ export const resourceLinks = [
   { href: "/stories", label: "Donor Stories" },
 ];
 
-export const companyLinks = [
+export const companyLinks: FooterLink[] = [
   { href: "/contact", label: "Contact" },
   { href: "/careers", label: "Careers" },
   { href: "/partners", label: "Partners" },

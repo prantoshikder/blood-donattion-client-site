@@ -1,12 +1,12 @@
 import { Activity, Droplet, HeartHandshake, Users } from "lucide-react";
-
-export type DashboardStat = {
-  label: string;
-  value: string;
-  delta: string;
-  icon: typeof Droplet;
-  color: string;
-};
+import type {
+  DashboardStat,
+  DashboardRequest,
+  DonationHistoryEntry,
+  DonationAchievement,
+  DashboardRequestListItem,
+  DashboardDonor,
+} from "@/types/dashboard";
 
 export const dashboardStats: DashboardStat[] = [
   {
@@ -38,15 +38,6 @@ export const dashboardStats: DashboardStat[] = [
     color: "from-emerald-500 to-teal-600",
   },
 ];
-
-export type DashboardRequest = {
-  name: string;
-  blood: string;
-  units: number;
-  location: string;
-  when: string;
-  urgent: boolean;
-};
 
 export const dashboardRequests: DashboardRequest[] = [
   {
@@ -85,13 +76,6 @@ export const dashboardRequests: DashboardRequest[] = [
 
 export const dashboardMonthly: number[] = [4, 6, 5, 8, 7, 9, 10, 8, 12, 11, 9, 14];
 
-export type DonationHistoryEntry = {
-  date: string;
-  place: string;
-  units: number;
-  recipient: string;
-};
-
 export const donationHistory: DonationHistoryEntry[] = [
   { date: "Feb 12, 2026", place: "Square Hospital, Dhaka", units: 1, recipient: "Anonymous" },
   { date: "Nov 02, 2025", place: "BIRDEM, Dhaka", units: 1, recipient: "Tania Akter" },
@@ -99,12 +83,6 @@ export const donationHistory: DonationHistoryEntry[] = [
   { date: "May 22, 2025", place: "United Hospital", units: 1, recipient: "Rakib Khan" },
   { date: "Feb 18, 2025", place: "Labaid Hospital", units: 1, recipient: "Anonymous" },
 ];
-
-export type DonationAchievement = {
-  t: string;
-  d: string;
-  earned: boolean;
-};
 
 export const donationAchievements: DonationAchievement[] = [
   { t: "First Drop", d: "Completed your first donation", earned: true },
@@ -114,17 +92,6 @@ export const donationAchievements: DonationAchievement[] = [
 ];
 
 export const settingsTabs: string[] = ["Profile", "Account", "Notifications", "Privacy"];
-
-export type DashboardRequestListItem = {
-  id: string;
-  patient: string;
-  blood: string;
-  units: number;
-  status: string;
-  hospital: string;
-  needed: string;
-  contact: string;
-};
 
 export const dashboardRequestList: DashboardRequestListItem[] = [
   { id: "R-1042", patient: "Mehedi Hasan", blood: "B+", units: 2, status: "urgent", hospital: "Square Hospital, Dhaka", needed: "Today, 4:00 PM", contact: "+880 1711 000 011" },
@@ -139,15 +106,6 @@ export const dashboardRequestColors: Record<string, string> = {
   urgent: "bg-rose-50 text-rose-700",
   open: "bg-amber-50 text-amber-700",
   fulfilled: "bg-emerald-50 text-emerald-700",
-};
-
-export type DashboardDonor = {
-  name: string;
-  blood: string;
-  city: string;
-  last: string;
-  rating: number;
-  available: boolean;
 };
 
 export const dashboardDonors: DashboardDonor[] = [
