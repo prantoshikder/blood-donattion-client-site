@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { testimonials } from "@/temp/homeData";
 
@@ -20,9 +21,13 @@ export default function TestimonialsSection() {
               </div>
               <p className="mt-4 text-sm text-slate-700 sm:text-base">“{t.quote}”</p>
               <div className="mt-5 flex items-center gap-3">
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-100 font-semibold text-brand-700">
-                  {t.name.charAt(0)}
-                </div>
+                <Image
+                  src={t.image}
+                  alt={t.name}
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 shrink-0 rounded-full object-cover"
+                />
                 <div className="min-w-0">
                   <p className="truncate text-sm font-semibold text-slate-900">{t.name}</p>
                   <p className="truncate text-xs text-slate-500">{t.role}</p>

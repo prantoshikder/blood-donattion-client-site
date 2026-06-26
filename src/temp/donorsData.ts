@@ -1,4 +1,30 @@
-import type { Donor } from "@/types/donors";
+import { Clock, MapPin, PhoneCall, Search, ShieldCheck, Users } from "lucide-react";
+import type { Donor, DonorStat, RequestStep } from "@/types/donors";
+
+export const donorStats: DonorStat[] = [
+  { icon: ShieldCheck, value: "12.4K+", label: "Verified donors" },
+  { icon: MapPin, value: "60+", label: "Cities covered" },
+  { icon: Clock, value: "~11 min", label: "Avg. response time" },
+  { icon: Users, value: "38K+", label: "Lives saved" },
+];
+
+export const requestSteps: RequestStep[] = [
+  {
+    icon: Search,
+    title: "Search & filter",
+    desc: "Find verified donors by blood group, city, or hospital in seconds.",
+  },
+  {
+    icon: PhoneCall,
+    title: "Send a request",
+    desc: "Reach out with one tap — donors get an instant notification.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Connect safely",
+    desc: "Coordinate the donation through verified, trusted profiles.",
+  },
+];
 
 export const donors: Donor[] = [
   {

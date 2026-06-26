@@ -24,22 +24,22 @@ export const team: TeamMember[] = [
   {
     n: "Sadia Rahman",
     r: "Founder & CEO",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&h=240&fit=crop&crop=faces",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=faces&q=80&auto=format",
   },
   {
     n: "Tanvir Ahmed",
     r: "Head of Operations",
-    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=240&h=240&fit=crop&crop=faces",
+    img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=600&h=800&fit=crop&crop=faces&q=80&auto=format",
   },
   {
     n: "Dr. Imran Hossain",
     r: "Medical Advisor",
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=240&h=240&fit=crop&crop=faces",
+    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&h=800&fit=crop&crop=faces&q=80&auto=format",
   },
   {
     n: "Nusrat Jahan",
     r: "Community Lead",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=240&h=240&fit=crop&crop=faces",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop&crop=faces&q=80&auto=format",
   },
 ];
 

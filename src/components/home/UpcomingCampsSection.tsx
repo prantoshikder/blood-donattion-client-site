@@ -1,5 +1,6 @@
 import { camps } from "@/temp/homeData";
 import { ArrowRight, Calendar, MapPin, Users } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function UpcomingCampsSection() {
@@ -32,7 +33,17 @@ export default function UpcomingCampsSection() {
         {camps.map((c) => {
           const progress = Math.round((c.registered / c.target) * 100);
           return (
-            <div key={c.title} className="card group">
+            <div key={c.title} className="card group overflow-hidden">
+              <div className="relative -mx-4 -mt-4 mb-4 aspect-video sm:-mx-6 sm:-mt-6 sm:mb-5">
+                <Image
+                  src={c.image}
+                  alt={c.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
+              </div>
+
               <div className="flex items-start gap-3">
                 <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-linear-to-br from-brand-500 to-rose-500 text-white shadow-md">
                   <Calendar className="h-5 w-5" />

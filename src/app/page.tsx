@@ -1,18 +1,18 @@
 import SiteShell from "@/components/SiteShell";
-import HeroSection from "@/components/home/HeroSection";
-import StatsSection from "@/components/home/StatsSection";
-import UrgentRequestsSection from "@/components/home/UrgentRequestsSection";
-import FeaturesSection from "@/components/home/FeaturesSection";
-import HowItWorksSection from "@/components/home/HowItWorksSection";
-import EligibilityCheckerSection from "@/components/home/EligibilityCheckerSection";
-import BloodCompatibilitySection from "@/components/home/BloodCompatibilitySection";
-import RolesSection from "@/components/home/RolesSection";
-import UpcomingCampsSection from "@/components/home/UpcomingCampsSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import PartnersSection from "@/components/home/PartnersSection";
-import FAQSection from "@/components/home/FAQSection";
 import AppDownloadSection from "@/components/home/AppDownloadSection";
+import BloodCompatibilitySection from "@/components/home/BloodCompatibilitySection";
 import CTASection from "@/components/home/CTASection";
+import EligibilityCheckerSection from "@/components/home/EligibilityCheckerSection";
+import FAQSection from "@/components/home/FAQSection";
+import FeaturesSection from "@/components/home/FeaturesSection";
+import HeroSection from "@/components/home/HeroSection";
+import HowItWorksSection from "@/components/home/HowItWorksSection";
+import PartnersSection from "@/components/home/PartnersSection";
+import RolesSection from "@/components/home/RolesSection";
+import StatsSection from "@/components/home/StatsSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import UpcomingCampsSection from "@/components/home/UpcomingCampsSection";
+import UrgentRequestsSection from "@/components/home/UrgentRequestsSection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({

@@ -12,6 +12,7 @@ import {
   HeartHandshake,
   Droplet,
   Users,
+  Clock,
 } from "lucide-react";
 import type {
   Perk,
@@ -186,10 +187,10 @@ export const roles: HomeRole[] = [
 
 // StatsSection
 export const stats: HomeStat[] = [
-  { k: "12,400+", v: "Verified Donors" },
-  { k: "640+", v: "Partner Hospitals" },
-  { k: "38,200", v: "Donations" },
-  { k: "24/7", v: "Emergency" },
+  { k: "12,400+", v: "Verified Donors", icon: Users },
+  { k: "640+", v: "Partner Hospitals", icon: Hospital },
+  { k: "38,200", v: "Donations", icon: Droplet },
+  { k: "24/7", v: "Emergency", icon: Clock },
 ];
 
 // TestimonialsSection
@@ -199,18 +200,24 @@ export const testimonials: HomeTestimonial[] = [
     role: "Donor • O+",
     quote:
       "I donated twice through RedDrop. The app reminds me when I'm eligible again. Truly thoughtful.",
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=faces",
   },
   {
     name: "Dr. Imran Hossain",
     role: "Hospital Coordinator",
     quote:
       "Our blood bank's emergency response time dropped by 60% after joining RedDrop.",
+    image:
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=120&h=120&fit=crop&crop=faces",
   },
   {
     name: "Tanvir Ahmed",
     role: "Volunteer",
     quote:
       "Organizing camps used to be chaotic. Now everything from invites to records is one tap away.",
+    image:
+      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces",
   },
 ];
 
@@ -223,6 +230,8 @@ export const camps: Camp[] = [
     venue: "TSC, University of Dhaka",
     registered: 142,
     target: 300,
+    image:
+      "https://images.unsplash.com/photo-1615461066159-fea0960485d5?w=600&h=400&fit=crop",
   },
   {
     title: "Corporate Donors Camp",
@@ -231,6 +240,8 @@ export const camps: Camp[] = [
     venue: "Bashundhara City, Dhaka",
     registered: 87,
     target: 200,
+    image:
+      "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&h=400&fit=crop",
   },
   {
     title: "Community Wellness Drive",
@@ -239,6 +250,8 @@ export const camps: Camp[] = [
     venue: "Dhanmondi Lake Park",
     registered: 56,
     target: 150,
+    image:
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h=400&fit=crop",
   },
 ];
 

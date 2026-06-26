@@ -55,6 +55,7 @@ export type HomeRole = {
 export type HomeStat = {
   k: string;
   v: string;
+  icon: LucideIcon;
 };
 
 // TestimonialsSection
@@ -62,6 +63,7 @@ export type HomeTestimonial = {
   name: string;
   role: string;
   quote: string;
+  image: string;
 };
 
 // UpcomingCampsSection
@@ -72,6 +74,7 @@ export type Camp = {
   venue: string;
   registered: number;
   target: number;
+  image: string;
 };
 
 // UrgentRequestsSection
