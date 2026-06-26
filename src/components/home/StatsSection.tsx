@@ -1,9 +1,4 @@
-const stats = [
-  { k: "12,400+", v: "Verified Donors" },
-  { k: "640+", v: "Partner Hospitals" },
-  { k: "38,200", v: "Donations" },
-  { k: "24/7", v: "Emergency" },
-];
+import { stats } from "@/temp/homeData";
 
 export default function StatsSection() {
   return (

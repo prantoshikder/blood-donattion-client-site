@@ -1,11 +1,4 @@
-import { Droplet, HeartHandshake, Users, Hospital } from "lucide-react";
-
-const roles = [
-  { t: "Donor", d: "Give blood and track impact", i: Droplet, c: "bg-rose-500" },
-  { t: "Receiver", d: "Request blood urgently", i: HeartHandshake, c: "bg-amber-500" },
-  { t: "Volunteer", d: "Organize camps & drives", i: Users, c: "bg-emerald-500" },
-  { t: "Hospital", d: "Manage inventory", i: Hospital, c: "bg-sky-500" },
-];
+import { roles } from "@/temp/homeData";
 
 export default function RolesSection() {
   return (

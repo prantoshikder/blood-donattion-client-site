@@ -1,15 +1,5 @@
-import { Filter, Search, MapPin, Phone, Star, Droplet } from "lucide-react";
-
-const donors = [
-  { name: "Tanvir Ahmed", blood: "O+", city: "Dhaka", last: "2 months ago", rating: 4.9, available: true },
-  { name: "Nusrat Jahan", blood: "A−", city: "Chattogram", last: "1 month ago", rating: 4.8, available: true },
-  { name: "Imran Hossain", blood: "B+", city: "Sylhet", last: "3 months ago", rating: 4.7, available: false },
-  { name: "Rakib Khan", blood: "AB+", city: "Dhaka", last: "4 months ago", rating: 4.9, available: true },
-  { name: "Mehedi Hasan", blood: "O−", city: "Khulna", last: "5 months ago", rating: 5.0, available: true },
-  { name: "Anika Sultana", blood: "A+", city: "Dhaka", last: "1 month ago", rating: 4.6, available: false },
-  { name: "Sadia Rahman", blood: "B−", city: "Rajshahi", last: "2 weeks ago", rating: 4.8, available: true },
-  { name: "Tania Akter", blood: "AB−", city: "Barishal", last: "6 months ago", rating: 4.7, available: true },
-];
+import { dashboardDonors as donors } from "@/temp/dashboardData";
+import { Droplet, Filter, MapPin, Phone, Search, Star } from "lucide-react";
 
 export default function DonorsPage() {
   return (
@@ -56,8 +46,12 @@ export default function DonorsPage() {
           <div key={d.name} className="card">
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-rose-600 font-semibold text-white">
-                  {d.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-linear-to-br from-brand-500 to-rose-600 font-semibold text-white">
+                  {d.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")
+                    .slice(0, 2)}
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900">{d.name}</p>

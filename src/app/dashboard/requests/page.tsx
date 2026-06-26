@@ -1,19 +1,8 @@
+import {
+  dashboardRequestColors as colors,
+  dashboardRequestList as requests,
+} from "@/temp/dashboardData";
 import { Calendar, MapPin, Phone, Plus, Search } from "lucide-react";
-
-const requests = [
-  { id: "R-1042", patient: "Mehedi Hasan", blood: "B+", units: 2, status: "urgent", hospital: "Square Hospital, Dhaka", needed: "Today, 4:00 PM", contact: "+880 1711 000 011" },
-  { id: "R-1041", patient: "Anika Sultana", blood: "O−", units: 1, status: "urgent", hospital: "Apollo, Dhaka", needed: "Tomorrow, 11:00 AM", contact: "+880 1722 000 022" },
-  { id: "R-1040", patient: "Rakib Hossain", blood: "A+", units: 3, status: "open", hospital: "United Hospital", needed: "Mar 22, 9:00 AM", contact: "+880 1733 000 033" },
-  { id: "R-1039", patient: "Tania Akter", blood: "AB+", units: 1, status: "open", hospital: "Evercare Hospital", needed: "Mar 24, 5:30 PM", contact: "+880 1744 000 044" },
-  { id: "R-1038", patient: "Imran Khan", blood: "O+", units: 2, status: "fulfilled", hospital: "BIRDEM", needed: "Mar 18", contact: "+880 1755 000 055" },
-  { id: "R-1037", patient: "Sumi Akter", blood: "A−", units: 1, status: "fulfilled", hospital: "Labaid", needed: "Mar 16", contact: "+880 1766 000 066" },
-];
-
-const colors: Record<string, string> = {
-  urgent: "bg-rose-50 text-rose-700",
-  open: "bg-amber-50 text-amber-700",
-  fulfilled: "bg-emerald-50 text-emerald-700",
-};
 
 export default function RequestsPage() {
   return (
@@ -62,14 +51,16 @@ export default function RequestsPage() {
       {/* Mobile card list */}
       <div className="grid gap-3 md:hidden">
         {requests.map((r) => (
-          <div key={r.id} className="card !p-4">
+          <div key={r.id} className="card p-4!">
             <div className="flex items-start gap-3">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-sm font-bold text-brand-700">
                 {r.blood}
               </span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between gap-2">
-                  <p className="truncate font-semibold text-slate-900">{r.patient}</p>
+                  <p className="truncate font-semibold text-slate-900">
+                    {r.patient}
+                  </p>
                   <span
                     className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${colors[r.status]}`}
                   >

@@ -1,26 +1,9 @@
+import { steps } from "@/temp/homeData";
 import { ArrowRight, Clock } from "lucide-react";
-
-const steps = [
-  {
-    n: "01",
-    title: "Create your account",
-    desc: "Sign up as a donor, receiver, volunteer, or hospital in less than a minute.",
-  },
-  {
-    n: "02",
-    title: "Find or request blood",
-    desc: "Search by blood type or post an urgent request — we route it to the nearest matches.",
-  },
-  {
-    n: "03",
-    title: "Connect & save a life",
-    desc: "Chat, arrange a meet at a hospital, and donate. Track every life you helped save.",
-  },
-];
 
 export default function HowItWorksSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-50 via-rose-50/70 to-white py-14 sm:py-20">
+    <section className="relative overflow-hidden bg-linear-to-br from-brand-50 via-rose-50/70 to-white py-14 sm:py-20">
       <div className="section">
         <div className="mx-auto max-w-2xl text-center">
           <span className="badge">

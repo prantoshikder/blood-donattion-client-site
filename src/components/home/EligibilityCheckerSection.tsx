@@ -1,27 +1,5 @@
-import { CheckCircle2, XCircle, Heart, Calendar, Weight, Activity } from "lucide-react";
-
-const checks = [
-  {
-    icon: Calendar,
-    pass: "Age 18 – 65 years",
-    fail: "Outside age range",
-  },
-  {
-    icon: Weight,
-    pass: "Weight 50 kg or more",
-    fail: "Under minimum weight",
-  },
-  {
-    icon: Activity,
-    pass: "Healthy & feeling well",
-    fail: "Recent illness or fever",
-  },
-  {
-    icon: Heart,
-    pass: "3+ months since last donation",
-    fail: "Donated recently",
-  },
-];
+import { CheckCircle2, XCircle, Heart } from "lucide-react";
+import { checks } from "@/temp/homeData";
 
 export default function EligibilityCheckerSection() {
   return (

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Logo from "./Logo";
+import { companyLinks, platformLinks, resourceLinks } from "@/temp/layoutData";
 
 type IconProps = { className?: string };
 
@@ -75,30 +76,6 @@ const YoutubeIcon = ({ className }: IconProps) => (
     <path d="M23.5 6.2c-.27-1.03-1.08-1.84-2.1-2.12C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.48C1.58 4.36.77 5.17.5 6.2 0 8.1 0 12 0 12s0 3.9.5 5.8c.27 1.03 1.08 1.84 2.1 2.12 1.9.48 9.4.48 9.4.48s7.5 0 9.4-.48c1.02-.28 1.83-1.09 2.1-2.12.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.27 3.6L9.6 15.6z" />
   </svg>
 );
-
-const platformLinks = [
-  { href: "/donors", label: "Find Donors" },
-  { href: "/requests", label: "Blood Requests" },
-  { href: "/camps", label: "Donation Camps" },
-  { href: "/eligibility", label: "Check Eligibility" },
-  { href: "/dashboard", label: "Dashboard" },
-];
-
-const resourceLinks = [
-  { href: "/about", label: "About Us" },
-  { href: "/blog", label: "Blog" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/compatibility", label: "Blood Compatibility" },
-  { href: "/stories", label: "Donor Stories" },
-];
-
-const companyLinks = [
-  { href: "/contact", label: "Contact" },
-  { href: "/careers", label: "Careers" },
-  { href: "/partners", label: "Partners" },
-  { href: "/press", label: "Press Kit" },
-  { href: "/support", label: "Help Center" },
-];
 
 const socials = [
   { href: "#", icon: FacebookIcon, label: "Facebook" },

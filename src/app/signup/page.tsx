@@ -1,77 +1,24 @@
 "use client";
 
+import AuthShell from "@/components/AuthShell";
+import { bloodGroups, roles, strengthMeta, type Role } from "@/temp/signupData";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  Eye,
+  EyeOff,
+  Hospital,
+  Loader2,
+  Lock,
+  Mail,
+  Phone,
+  Sparkles,
+  User,
+} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import {
-  ArrowRight,
-  ArrowLeft,
-  Droplet,
-  HeartHandshake,
-  Hospital,
-  Mail,
-  Lock,
-  User,
-  Phone,
-  ShieldCheck,
-  Users,
-  Eye,
-  EyeOff,
-  CheckCircle2,
-  Loader2,
-  Sparkles,
-} from "lucide-react";
-import AuthShell from "@/components/AuthShell";
-
-type Role = "donor" | "receiver" | "volunteer" | "hospital" | "admin";
-
-const roles: {
-  key: Role;
-  title: string;
-  desc: string;
-  icon: typeof Droplet;
-  color: string;
-  badge?: string;
-}[] = [
-  {
-    key: "donor",
-    title: "Donor",
-    desc: "I want to donate blood and help others",
-    icon: Droplet,
-    color: "from-rose-500 to-rose-600",
-    badge: "Popular",
-  },
-  {
-    key: "receiver",
-    title: "Receiver",
-    desc: "I or my family needs blood",
-    icon: HeartHandshake,
-    color: "from-amber-500 to-orange-600",
-  },
-  {
-    key: "volunteer",
-    title: "Volunteer",
-    desc: "I want to organize camps & drives",
-    icon: Users,
-    color: "from-emerald-500 to-teal-600",
-  },
-  {
-    key: "hospital",
-    title: "Hospital / Blood Bank",
-    desc: "Manage inventory & requests",
-    icon: Hospital,
-    color: "from-sky-500 to-blue-600",
-  },
-  {
-    key: "admin",
-    title: "Admin",
-    desc: "Manage platform operations",
-    icon: ShieldCheck,
-    color: "from-violet-500 to-indigo-600",
-  },
-];
-
-const bloodGroups = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
 
 function getPasswordStrength(pw: string) {
   let score = 0;
@@ -81,14 +28,6 @@ function getPasswordStrength(pw: string) {
   if (/[^A-Za-z0-9]/.test(pw)) score++;
   return score;
 }
-
-const strengthMeta = [
-  { label: "Too weak", color: "bg-slate-200", text: "text-slate-400" },
-  { label: "Weak", color: "bg-rose-500", text: "text-rose-600" },
-  { label: "Fair", color: "bg-amber-500", text: "text-amber-600" },
-  { label: "Good", color: "bg-sky-500", text: "text-sky-600" },
-  { label: "Strong", color: "bg-emerald-500", text: "text-emerald-600" },
-];
 
 export default function SignupPage() {
   const router = useRouter();
@@ -200,7 +139,9 @@ export default function SignupPage() {
                       </span>
                     )}
                   </div>
-                  <p className="mt-0.5 truncate text-xs text-slate-500">{r.desc}</p>
+                  <p className="mt-0.5 truncate text-xs text-slate-500">
+                    {r.desc}
+                  </p>
                 </div>
                 <div
                   className={`grid h-5 w-5 shrink-0 place-items-center rounded-full border-2 transition ${
@@ -209,7 +150,9 @@ export default function SignupPage() {
                       : "border-slate-300 group-hover:border-slate-400"
                   }`}
                 >
-                  {selected && <div className="h-2 w-2 rounded-full bg-white" />}
+                  {selected && (
+                    <div className="h-2 w-2 rounded-full bg-white" />
+                  )}
                 </div>
               </button>
             );
@@ -388,7 +331,11 @@ export default function SignupPage() {
                 aria-label="Toggle password visibility"
                 className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
               >
-                {show ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                {show ? (
+                  <EyeOff className="h-4 w-4" />
+                ) : (
+                  <Eye className="h-4 w-4" />
+                )}
               </button>
             </div>
 
@@ -449,7 +396,7 @@ export default function SignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="inline-flex min-h-12 flex-[2] items-center justify-center gap-2 rounded-2xl bg-linear-to-r from-brand-600 to-rose-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition hover:shadow-xl hover:shadow-brand-500/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+              className="inline-flex min-h-12 flex-2 items-center justify-center gap-2 rounded-2xl bg-linear-to-r from-brand-600 to-rose-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition hover:shadow-xl hover:shadow-brand-500/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
             >
               {loading ? (
                 <>

@@ -5,13 +5,9 @@ import {
   ArrowRight,
   Bell,
   ChevronRight,
-  Droplet,
-  Home,
-  Info,
   LogIn,
   Menu,
   Phone,
-  Search,
   X,
 } from "lucide-react";
 import Link from "next/link";
@@ -19,14 +15,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import EmergencyModal from "./EmergencyModal";
-
-const links = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/donors", label: "Find Donors", icon: Search },
-  { href: "/requests", label: "Blood Requests", icon: Droplet },
-  { href: "/about", label: "About", icon: Info },
-  { href: "/contact", label: "Contact", icon: Phone },
-];
+import { links } from "@/temp/layoutData";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

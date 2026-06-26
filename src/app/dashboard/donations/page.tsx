@@ -1,19 +1,8 @@
 import { Award, Calendar, Droplet, Hospital, Plus, TrendingUp } from "lucide-react";
-
-const history = [
-  { date: "Feb 12, 2026", place: "Square Hospital, Dhaka", units: 1, recipient: "Anonymous" },
-  { date: "Nov 02, 2025", place: "BIRDEM, Dhaka", units: 1, recipient: "Tania Akter" },
-  { date: "Aug 14, 2025", place: "Apollo Hospital", units: 1, recipient: "Mehedi Hasan" },
-  { date: "May 22, 2025", place: "United Hospital", units: 1, recipient: "Rakib Khan" },
-  { date: "Feb 18, 2025", place: "Labaid Hospital", units: 1, recipient: "Anonymous" },
-];
-
-const achievements = [
-  { t: "First Drop", d: "Completed your first donation", earned: true },
-  { t: "Lifesaver", d: "Helped 10+ patients", earned: true },
-  { t: "Consistency", d: "5 donations in a year", earned: true },
-  { t: "Hero of the Year", d: "Top 1% donor in your city", earned: false },
-];
+import {
+  donationHistory as history,
+  donationAchievements as achievements,
+} from "@/temp/dashboardData";
 
 export default function DonationsPage() {
   return (

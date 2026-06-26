@@ -1,25 +1,5 @@
 import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Sadia Rahman",
-    role: "Donor • O+",
-    quote:
-      "I donated twice through RedDrop. The app reminds me when I'm eligible again. Truly thoughtful.",
-  },
-  {
-    name: "Dr. Imran Hossain",
-    role: "Hospital Coordinator",
-    quote:
-      "Our blood bank's emergency response time dropped by 60% after joining RedDrop.",
-  },
-  {
-    name: "Tanvir Ahmed",
-    role: "Volunteer",
-    quote:
-      "Organizing camps used to be chaotic. Now everything from invites to records is one tap away.",
-  },
-];
+import { testimonials } from "@/temp/homeData";
 
 export default function TestimonialsSection() {
   return (

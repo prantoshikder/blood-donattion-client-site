@@ -1,31 +1,5 @@
 import { HelpCircle, ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    q: "Is donating blood safe?",
-    a: "Yes. Sterile, single-use needles are used for every donation. The process takes about 10 minutes and is performed by trained medical professionals.",
-  },
-  {
-    q: "How often can I donate blood?",
-    a: "Most healthy adults can donate whole blood every 90 days (about 3 months). Plasma and platelet donations have different intervals.",
-  },
-  {
-    q: "Who can donate blood?",
-    a: "Generally, anyone aged 18 – 65, weighing at least 50 kg, and in good health. Take our quick eligibility quiz above to confirm.",
-  },
-  {
-    q: "Does RedDrop charge donors or receivers?",
-    a: "No. RedDrop is completely free for donors and receivers. We never charge for connecting people in need with willing donors.",
-  },
-  {
-    q: "How is my personal data protected?",
-    a: "Your contact info is only shared with verified hospitals or receivers when you explicitly accept a request. Read our Privacy Policy for full details.",
-  },
-  {
-    q: "How do emergency alerts work?",
-    a: "When a critical request matches your blood type and location, you'll receive a push notification. You choose whether to respond — there's no obligation.",
-  },
-];
+import { faqs } from "@/temp/homeData";
 
 export default function FAQSection() {
   return (

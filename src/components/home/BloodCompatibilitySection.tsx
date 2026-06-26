@@ -1,15 +1,5 @@
-import { Droplet, ArrowRight } from "lucide-react";
-
-const compatibility = [
-  { type: "O−", donateTo: "Everyone", receiveFrom: "O−", tag: "Universal donor", color: "from-rose-500 to-rose-600" },
-  { type: "O+", donateTo: "O+, A+, B+, AB+", receiveFrom: "O+, O−", tag: "Most common", color: "from-rose-400 to-rose-500" },
-  { type: "A−", donateTo: "A±, AB±", receiveFrom: "A−, O−", tag: "Rare", color: "from-amber-500 to-orange-500" },
-  { type: "A+", donateTo: "A+, AB+", receiveFrom: "A±, O±", tag: "Common", color: "from-amber-400 to-amber-500" },
-  { type: "B−", donateTo: "B±, AB±", receiveFrom: "B−, O−", tag: "Rare", color: "from-emerald-500 to-teal-600" },
-  { type: "B+", donateTo: "B+, AB+", receiveFrom: "B±, O±", tag: "Common", color: "from-emerald-400 to-emerald-500" },
-  { type: "AB−", donateTo: "AB±", receiveFrom: "A−, B−, AB−, O−", tag: "Rare", color: "from-violet-500 to-indigo-600" },
-  { type: "AB+", donateTo: "AB+", receiveFrom: "Everyone", tag: "Universal receiver", color: "from-violet-400 to-purple-500" },
-];
+import { compatibility } from "@/temp/homeData";
+import { ArrowRight, Droplet } from "lucide-react";
 
 export default function BloodCompatibilitySection() {
   return (
@@ -34,7 +24,7 @@ export default function BloodCompatibilitySection() {
             <div key={c.type} className="card group">
               <div className="flex items-center justify-between">
                 <div
-                  className={`grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br ${c.color} text-white shadow-md`}
+                  className={`grid h-14 w-14 place-items-center rounded-2xl bg-linear-to-br ${c.color} text-white shadow-md`}
                 >
                   <span className="text-lg font-extrabold">{c.type}</span>
                 </div>
@@ -47,15 +37,21 @@ export default function BloodCompatibilitySection() {
                 <div className="flex items-start gap-2">
                   <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-slate-500">Donate to</p>
+                    <p className="text-xs uppercase tracking-wider text-slate-500">
+                      Donate to
+                    </p>
                     <p className="font-medium text-slate-900">{c.donateTo}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
                   <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 rotate-180 text-sky-600" />
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-slate-500">Receive from</p>
-                    <p className="font-medium text-slate-900">{c.receiveFrom}</p>
+                    <p className="text-xs uppercase tracking-wider text-slate-500">
+                      Receive from
+                    </p>
+                    <p className="font-medium text-slate-900">
+                      {c.receiveFrom}
+                    </p>
                   </div>
                 </div>
               </div>

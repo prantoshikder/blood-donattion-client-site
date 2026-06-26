@@ -15,8 +15,7 @@ import {
   Loader2,
   ChevronRight,
 } from "lucide-react";
-
-const bloodGroups = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
+import { bloodGroups } from "@/temp/layoutData";
 
 type Props = {
   open: boolean;

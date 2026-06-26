@@ -1,37 +1,6 @@
+import { severityStyles, urgentRequests } from "@/temp/homeData";
+import { AlertCircle, ArrowRight, Clock, Droplet, MapPin } from "lucide-react";
 import Link from "next/link";
-import { AlertCircle, MapPin, Clock, ArrowRight, Droplet } from "lucide-react";
-
-const urgentRequests = [
-  {
-    blood: "O−",
-    patient: "Aman Khan",
-    hospital: "Square Hospital, Dhaka",
-    units: 2,
-    posted: "12 min ago",
-    severity: "Critical",
-  },
-  {
-    blood: "AB+",
-    patient: "Rina Akter",
-    hospital: "Apollo Hospital, Dhaka",
-    units: 1,
-    posted: "38 min ago",
-    severity: "Urgent",
-  },
-  {
-    blood: "B+",
-    patient: "Hasan Ali",
-    hospital: "United Hospital, Dhaka",
-    units: 3,
-    posted: "1 hr ago",
-    severity: "Urgent",
-  },
-];
-
-const severityStyles: Record<string, string> = {
-  Critical: "bg-rose-100 text-rose-700 ring-1 ring-rose-200",
-  Urgent: "bg-amber-100 text-amber-700 ring-1 ring-amber-200",
-};
 
 export default function UrgentRequestsSection() {
   return (
@@ -44,7 +13,8 @@ export default function UrgentRequestsSection() {
           </span>
           <h2 className="heading-2 mt-3 text-balance">Urgent blood requests</h2>
           <p className="mt-2 max-w-xl text-sm text-slate-600 sm:text-base">
-            Real patients near you need help right now. One click could save a life today.
+            Real patients near you need help right now. One click could save a
+            life today.
           </p>
         </div>
         <Link
@@ -62,12 +32,16 @@ export default function UrgentRequestsSection() {
             <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-rose-50/60" />
             <div className="relative flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-rose-500 to-rose-600 text-white shadow-md">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-linear-to-br from-rose-500 to-rose-600 text-white shadow-md">
                   <Droplet className="h-6 w-6 fill-white" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xl font-extrabold text-slate-900">{r.blood}</p>
-                  <p className="text-xs text-slate-500">{r.units} unit(s) needed</p>
+                  <p className="text-xl font-extrabold text-slate-900">
+                    {r.blood}
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    {r.units} unit(s) needed
+                  </p>
                 </div>
               </div>
               <span

@@ -1,20 +1,19 @@
-import Link from "next/link";
+import { bloodGroups } from "@/temp/homeData";
 import {
-  ArrowRight,
-  Droplet,
-  Users,
   Activity,
-  MapPin,
+  ArrowRight,
   CheckCircle2,
+  Droplet,
+  MapPin,
   Sparkles,
+  Users,
 } from "lucide-react";
-
-const bloodGroups = ["A+", "A−", "B+", "B−", "O+", "O−", "AB+", "AB−"];
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-grid-pattern bg-[size:24px_24px] opacity-50 sm:bg-[size:32px_32px]" />
+      <div className="absolute inset-0 -z-10 bg-grid-pattern bg-size-[24px_24px] opacity-50 sm:bg-size-[32px_32px]" />
       <div className="absolute -left-32 -top-32 -z-10 h-64 w-64 rounded-full bg-brand-200/40 blur-3xl sm:h-96 sm:w-96" />
       <div className="absolute -right-32 top-40 -z-10 h-64 w-64 rounded-full bg-rose-100 blur-3xl sm:h-96 sm:w-96" />
 
@@ -22,13 +21,15 @@ export default function HeroSection() {
         <div className="animate-float-up">
           <span className="badge">
             <Sparkles className="h-3.5 w-3.5" />
-            <span className="hidden xs:inline sm:inline">Trusted by 12,000+ donors</span>
+            <span className="hidden xs:inline sm:inline">
+              Trusted by 12,000+ donors
+            </span>
             <span className="xs:hidden sm:hidden">12K+ trusted donors</span>
           </span>
           <h1 className="heading-1 mt-4 text-balance sm:mt-5">
             Donate Blood.
             <br />
-            <span className="bg-gradient-to-r from-brand-600 to-rose-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-600 to-rose-500 bg-clip-text text-transparent">
               Save a Life.
             </span>
           </h1>
@@ -39,7 +40,10 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-            <Link href="/signup?role=donor" className="btn-primary w-full sm:w-auto">
+            <Link
+              href="/signup?role=donor"
+              className="btn-primary w-full sm:w-auto"
+            >
               Become a Donor
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -49,11 +53,7 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-600 sm:mt-10 sm:gap-6">
-            {[
-              "Free forever",
-              "Verified network",
-              "24/7 emergency",
-            ].map((t) => (
+            {["Free forever", "Verified network", "24/7 emergency"].map((t) => (
               <div key={t} className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                 {t}
@@ -63,7 +63,7 @@ export default function HeroSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-200/40 via-rose-100/50 to-amber-100/40 blur-2xl" />
+          <div className="absolute inset-0 -z-10 bg-linear-to-br from-brand-200/40 via-rose-100/50 to-amber-100/40 blur-2xl" />
           <div className="relative grid gap-4">
             <div className="card relative overflow-hidden shadow-xl sm:p-7">
               <div className="flex items-center justify-between gap-3">
@@ -101,21 +101,27 @@ export default function HeroSection() {
             </div>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <div className="card flex items-center gap-3 !p-4 sm:!p-5">
+              <div className="card flex items-center gap-3 p-4! sm:p-5!">
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600 sm:h-12 sm:w-12">
                   <Users className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xl font-bold text-slate-900 sm:text-2xl">12.4K</p>
-                  <p className="truncate text-xs text-slate-500">Active donors</p>
+                  <p className="text-xl font-bold text-slate-900 sm:text-2xl">
+                    12.4K
+                  </p>
+                  <p className="truncate text-xs text-slate-500">
+                    Active donors
+                  </p>
                 </div>
               </div>
-              <div className="card flex items-center gap-3 !p-4 sm:!p-5">
+              <div className="card flex items-center gap-3 p-4! sm:p-5!">
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600 sm:h-12 sm:w-12">
                   <Activity className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xl font-bold text-slate-900 sm:text-2xl">38K+</p>
+                  <p className="text-xl font-bold text-slate-900 sm:text-2xl">
+                    38K+
+                  </p>
                   <p className="truncate text-xs text-slate-500">Lives saved</p>
                 </div>
               </div>

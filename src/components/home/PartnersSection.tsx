@@ -1,19 +1,5 @@
 import { Hospital, ShieldCheck } from "lucide-react";
-
-const partners = [
-  "Square Hospital",
-  "Apollo Hospital",
-  "United Hospital",
-  "Evercare",
-  "Labaid",
-  "Ibn Sina",
-  "BIRDEM",
-  "ICDDR,B",
-  "Sandhani",
-  "Bangladesh Red Crescent",
-  "Quantum Foundation",
-  "Badhan",
-];
+import { partners } from "@/temp/homeData";
 
 export default function PartnersSection() {
   return (

@@ -1,50 +1,10 @@
 "use client";
 
+import { groups } from "@/temp/layoutData";
+import { Activity, LogOut } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  LayoutDashboard,
-  Droplet,
-  Users,
-  Calendar,
-  HeartHandshake,
-  Bell,
-  Settings,
-  LogOut,
-  History,
-  MessageSquare,
-  Hospital,
-  Activity,
-} from "lucide-react";
 import Logo from "../Logo";
-
-const groups = [
-  {
-    label: "Overview",
-    items: [
-      { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-      { href: "/dashboard/donations", icon: Droplet, label: "Donations" },
-      { href: "/dashboard/requests", icon: HeartHandshake, label: "Requests" },
-      { href: "/dashboard/donors", icon: Users, label: "Donors" },
-    ],
-  },
-  {
-    label: "Activity",
-    items: [
-      { href: "/dashboard/schedule", icon: Calendar, label: "Schedule" },
-      { href: "/dashboard/history", icon: History, label: "History" },
-      { href: "/dashboard/inventory", icon: Hospital, label: "Inventory" },
-      { href: "/dashboard/messages", icon: MessageSquare, label: "Messages" },
-    ],
-  },
-  {
-    label: "Account",
-    items: [
-      { href: "/dashboard/notifications", icon: Bell, label: "Notifications" },
-      { href: "/dashboard/settings", icon: Settings, label: "Settings" },
-    ],
-  },
-];
 
 export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
@@ -67,7 +27,8 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               {g.items.map((item) => {
                 const active =
                   pathname === item.href ||
-                  (item.href !== "/dashboard" && pathname.startsWith(item.href));
+                  (item.href !== "/dashboard" &&
+                    pathname.startsWith(item.href));
                 return (
                   <li key={item.href}>
                     <Link
@@ -81,7 +42,9 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
                     >
                       <item.icon
                         className={`h-5 w-5 shrink-0 ${
-                          active ? "text-brand-600" : "text-slate-400 group-hover:text-slate-600"
+                          active
+                            ? "text-brand-600"
+                            : "text-slate-400 group-hover:text-slate-600"
                         }`}
                       />
                       {item.label}
@@ -98,7 +61,7 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
       </nav>
 
       <div className="border-t border-slate-200 p-3">
-        <div className="rounded-2xl bg-gradient-to-br from-brand-600 to-rose-600 p-4 text-white">
+        <div className="rounded-2xl bg-linear-to-br from-brand-600 to-rose-600 p-4 text-white">
           <Activity className="h-5 w-5" />
           <p className="mt-2 text-sm font-semibold">Eligible to donate</p>
           <p className="text-xs text-white/85">

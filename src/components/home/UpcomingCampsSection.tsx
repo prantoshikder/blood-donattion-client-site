@@ -1,32 +1,6 @@
+import { camps } from "@/temp/homeData";
+import { ArrowRight, Calendar, MapPin, Users } from "lucide-react";
 import Link from "next/link";
-import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
-
-const camps = [
-  {
-    title: "Dhaka University Blood Drive",
-    date: "May 28, 2026",
-    time: "9:00 AM – 4:00 PM",
-    venue: "TSC, University of Dhaka",
-    registered: 142,
-    target: 300,
-  },
-  {
-    title: "Corporate Donors Camp",
-    date: "Jun 04, 2026",
-    time: "10:00 AM – 5:00 PM",
-    venue: "Bashundhara City, Dhaka",
-    registered: 87,
-    target: 200,
-  },
-  {
-    title: "Community Wellness Drive",
-    date: "Jun 12, 2026",
-    time: "8:00 AM – 2:00 PM",
-    venue: "Dhanmondi Lake Park",
-    registered: 56,
-    target: 150,
-  },
-];
 
 export default function UpcomingCampsSection() {
   return (
@@ -37,7 +11,9 @@ export default function UpcomingCampsSection() {
             <Calendar className="h-3.5 w-3.5" />
             Upcoming events
           </span>
-          <h2 className="heading-2 mt-3 text-balance">Join a blood donation camp</h2>
+          <h2 className="heading-2 mt-3 text-balance">
+            Join a blood donation camp
+          </h2>
           <p className="mt-2 max-w-xl text-sm text-slate-600 sm:text-base">
             Reserve a spot at a community drive near you — bring a friend and
             double your impact.
@@ -58,14 +34,16 @@ export default function UpcomingCampsSection() {
           return (
             <div key={c.title} className="card group">
               <div className="flex items-start gap-3">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-rose-500 text-white shadow-md">
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-linear-to-br from-brand-500 to-rose-500 text-white shadow-md">
                   <Calendar className="h-5 w-5" />
                 </div>
                 <div className="min-w-0">
                   <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
                     {c.title}
                   </h3>
-                  <p className="mt-0.5 text-xs text-slate-500">{c.date} • {c.time}</p>
+                  <p className="mt-0.5 text-xs text-slate-500">
+                    {c.date} • {c.time}
+                  </p>
                 </div>
               </div>
 
@@ -80,11 +58,13 @@ export default function UpcomingCampsSection() {
                     <Users className="h-3.5 w-3.5" />
                     {c.registered} / {c.target} registered
                   </span>
-                  <span className="font-semibold text-brand-700">{progress}%</span>
+                  <span className="font-semibold text-brand-700">
+                    {progress}%
+                  </span>
                 </div>
                 <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-100">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-brand-500 to-rose-500 transition-all"
+                    className="h-full rounded-full bg-linear-to-r from-brand-500 to-rose-500 transition-all"
                     style={{ width: `${progress}%` }}
                   />
                 </div>

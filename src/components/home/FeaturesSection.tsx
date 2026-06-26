@@ -1,51 +1,5 @@
-import {
-  Search,
-  Bell,
-  ShieldCheck,
-  Activity,
-  Hospital,
-  HeartHandshake,
-  Star,
-} from "lucide-react";
-
-const features = [
-  {
-    icon: Search,
-    title: "Find Donors Instantly",
-    desc: "Search by blood group, city, or hospital and reach verified donors in seconds.",
-    color: "from-rose-500 to-rose-600",
-  },
-  {
-    icon: Bell,
-    title: "Emergency Alerts",
-    desc: "Broadcast urgent requests and notify nearby donors automatically.",
-    color: "from-amber-500 to-orange-600",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Verified Profiles",
-    desc: "Every donor and hospital is verified to keep the network safe and trustworthy.",
-    color: "from-emerald-500 to-teal-600",
-  },
-  {
-    icon: Activity,
-    title: "Donation History",
-    desc: "Track every donation, eligibility, and next safe donation date in one place.",
-    color: "from-violet-500 to-indigo-600",
-  },
-  {
-    icon: Hospital,
-    title: "Hospital Network",
-    desc: "Hospitals and blood banks can manage inventory and request directly from donors.",
-    color: "from-sky-500 to-blue-600",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Volunteer Hub",
-    desc: "Volunteers organize camps, manage requests, and grow the donor community.",
-    color: "from-pink-500 to-fuchsia-600",
-  },
-];
+import { features } from "@/temp/homeData";
+import { Star } from "lucide-react";
 
 export default function FeaturesSection() {
   return (
@@ -68,11 +22,13 @@ export default function FeaturesSection() {
         {features.map((f) => (
           <div key={f.title} className="card group">
             <div
-              className={`mb-4 inline-grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br ${f.color} text-white shadow-md transition group-hover:scale-105`}
+              className={`mb-4 inline-grid h-12 w-12 place-items-center rounded-xl bg-linear-to-br ${f.color} text-white shadow-md transition group-hover:scale-105`}
             >
               <f.icon className="h-6 w-6" />
             </div>
-            <h3 className="text-base font-semibold text-slate-900 sm:text-lg">{f.title}</h3>
+            <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
+              {f.title}
+            </h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">
               {f.desc}
             </p>
