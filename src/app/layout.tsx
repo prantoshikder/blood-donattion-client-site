@@ -1,6 +1,6 @@
+import { siteConfig } from "@/lib/seo";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { siteConfig } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -87,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" data-scroll-behavior="smooth" className={inter.variable}>
       <body
         suppressHydrationWarning
         className="min-h-screen bg-slate-50 font-sans text-slate-900 antialiased"
